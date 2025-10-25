@@ -31,7 +31,7 @@ Ce thème a été conçu pour être simple à maintenir, modulaire et facilement
 
 1. Télécharger ou cloner ce dépôt :
    ```bash
-   git clone https://github.com/<TON_UTILISATEUR>/aeaih-theme.git
+   git clone https://github.com/samfrick/aeaih.git
 
 2. Copier le dossier aeaih/ dans :
 
@@ -55,7 +55,7 @@ Ce thème a été conçu pour être simple à maintenir, modulaire et facilement
 
 <h3>🧱 Pages prévues</h3>
 
-    Page	        Description
+    Page	            Description
     🏠  Accueil	        Hero, actualités, présentation de l’association
     👥  Membres	        Photo de groupe, organigramme, anciens bureaux
     🎉  Événements	    Actualités, événements à venir et passés
