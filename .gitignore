@@ -1,0 +1,10 @@
+# Système
+.DS_Store
+Thumbs.db
+
+# Fichiers de dev
+node_modules/
+*.log
+
+# Environnement local (si build plus tard)
+.env
