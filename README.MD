@@ -7,22 +7,22 @@ Ce thème a été conçu pour être simple à maintenir, modulaire et facilement
 
 <h2>🧭 Structure du projet</h2>
 
-aeaih/
-│
-├── style.css # Métadonnées et styles globaux du thème
-├── functions.php # Configuration du thème (menus, assets, etc.)
-├── header.php # En-tête HTML du site
-├── footer.php # Pied de page global
-├── 404.php # Page d’erreur
-├── page.php # Template de base pour les pages
-├── single.php # Template pour les articles / posts
-└── templates/
-├── components/ # Petits composants réutilisables (boutons, cartes…)
-├── flex/ # Sections flexibles (via ACF)
-└── sections/ # Blocs de mise en page principaux
-├── contact/ # Section contact
-├── default/ # Mise en page standard
-└── hero/ # Section hero (bannière d’accueil)
+    aeaih/
+    │
+    ├── style.css # Métadonnées et styles globaux du thème
+    ├── functions.php # Configuration du thème (menus, assets, etc.)
+    ├── header.php # En-tête HTML du site
+    ├── footer.php # Pied de page global
+    ├── 404.php # Page d’erreur
+    ├── page.php # Template de base pour les pages
+    ├── single.php # Template pour les articles / posts
+    └── templates/
+    ├── components/ # Petits composants réutilisables (boutons, cartes…)
+    ├── flex/ # Sections flexibles (via ACF)
+    └── sections/ # Blocs de mise en page principaux
+    ├── contact/ # Section contact
+    ├── default/ # Mise en page standard
+    └── hero/ # Section hero (bannière d’accueil)
 
 
 ---
@@ -56,9 +56,9 @@ aeaih/
 <h3>🧱 Pages prévues</h3>
 
     Page	        Description
-🏠  Accueil	        Hero, actualités, présentation de l’association
-👥  Membres	        Photo de groupe, organigramme, anciens bureaux
-🎉  Événements	    Actualités, événements à venir et passés
+    🏠  Accueil	        Hero, actualités, présentation de l’association
+    👥  Membres	        Photo de groupe, organigramme, anciens bureaux
+    🎉  Événements	    Actualités, événements à venir et passés
 
 
 <h3>🧑‍💻  Contributeurs</h3>
