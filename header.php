@@ -13,7 +13,7 @@ defined('ABSPATH') || exit;
 </head>
 
 <body <?php body_class(); ?>>
-    <header class="site-header">
+    <header class="header">
         <div class="container">
         <a href="<?php echo home_url(); ?>" class="logo"><?php bloginfo('name'); ?></a>
         <nav class="main-nav">
@@ -26,3 +26,6 @@ defined('ABSPATH') || exit;
         </nav>
         </div>
     </header>
+
+    <main data-taxi>
+        <div data-taxi-view class="page-container">
