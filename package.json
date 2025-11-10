@@ -1,0 +1,28 @@
+{
+  "name": "aeaih",
+  "version": "1.0.0",
+  "description": "<h1>🎨 Thème WordPress AEAIH</h1>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samfrick/aeaih.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samfrick/aeaih/issues"
+  },
+  "homepage": "https://github.com/samfrick/aeaih#readme",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.16",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.16",
+    "vite": "^7.1.12"
+  }
+}

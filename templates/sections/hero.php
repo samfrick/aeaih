@@ -1,25 +1,31 @@
 <?php
-$title = get_field('hero_title') ?: get_the_title();
-$subtitle = get_field('hero_subtitle');
-$image = get_field('hero_image');
-$btn_members = get_field('hero_btn_members');
-$btn_events = get_field('hero_btn_events');
+$hero = get_field('hero');
 ?>
 
-<section class="hero relative text-white min-h-auto">
+<section id="hero" class="hero relative text-white min-h-auto">
     <div class="relative overflow-hidden">
-        <?php if ($image): ?>
+        <?php if ($hero['hero_image']) : ?>
             <div>
-                <img data-animation="translation" data-animation-speed="2" data-animation-type="top" src="<?= $image['url'] ?>" alt="image hero" class="hero-image h-[100vh] w-[100vw] object-cover"/>
+                <img data-animation="translation" data-animation-speed="2" data-animation-type="top" src="<?= $hero['hero_image']['url'] ?>" alt="image hero" class="hero-image h-[100vh] w-[100vw] object-cover"/>
             </div>
         <?php endif; ?>
         <div class="hero-content -container absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center gap-32 w-800">
-            <?php if ($title): ?>
-                <h1 class="h1 uppercase" data-animation="subtitle"><?= $title ?></h1>
+            <?php if ($hero['hero_title']) : ?>
+                <h1><?= $hero['hero_title'] ?></h1>
             <?php endif; ?>
-            <?php if ($subtitle): ?>
-                <p class="p22" data-animation="paragraph" data-animation-delay="0.2"><?= $subtitle ?></p>
+            <?php if ($hero['hero_subtitle']) : ?>
+                <p><?= $hero['hero_subtitle'] ?></p>
             <?php endif; ?>
+            <!-- <?php if ($hero['hero_btn_members']) : ?>
+                <a href="<?= $hero['hero_btn_members']['url'] ?>" class="btn btn-primary inline-block w-max" target="<?= $hero['hero_btn_members']['target'] ?>">
+                    <?= $hero['hero_btn_members']['title'] ?>
+                </a>
+            <?php endif; ?>
+            <?php if ($hero['hero_btn_events']) : ?>
+                <a href="<?= $hero['hero_btn_events']['url'] ?>" class="btn btn-primary inline-block w-max" target="<?= $hero['hero_btn_events']['target'] ?>">
+                    <?= $hero['hero_btn_events']['title'] ?>
+                </a>
+            <?php endif; ?> -->
         </div>
     </div>
 </section>
