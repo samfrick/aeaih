@@ -11,6 +11,7 @@ get_header();
     while ( have_posts() ) : the_post();
 
       get_template_part('templates/sections/hero');
+      get_template_part('templates/flex/actualities');
 
     endwhile;
   endif;

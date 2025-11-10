@@ -15,9 +15,9 @@ defined('ABSPATH') || exit;
 
 <body <?php body_class(); ?>>
     <header class="header">
-        <div class="container">
+        <div class="container relative">
             <a href="<?php echo home_url(); ?>" class="logo"><?php bloginfo('name'); ?></a>
-            <nav class="main-nav">
+            <nav class="main-nav absolute">
                 <?php
                 wp_nav_menu([
                     'theme_location' => 'main_menu',
