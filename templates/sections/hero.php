@@ -2,30 +2,40 @@
 $hero = get_field('hero');
 ?>
 
-<section id="hero" class="hero relative text-white min-h-auto">
-    <div class="relative overflow-hidden">
-        <?php if ($hero['hero_image']) : ?>
-            <div>
-                <img data-animation="translation" data-animation-speed="2" data-animation-type="top" src="<?= $hero['hero_image']['url'] ?>" alt="image hero" class="hero-image h-[100vh] w-[100vw] object-cover"/>
-            </div>
+<section id="hero" class="hero relative flex flex-col items-center justify-center h-screen text-center text-white overflow-hidden">
+    <?php if ($hero['hero_image']) : ?>
+        <img data-animation="translation" data-animation-speed="2" data-animation-type="top" src="<?= $hero['hero_image']['url'] ?>" alt="<?= $hero['hero_image']['alt'] ?? 'image hero' ?>" class="hero-image absolute -z-10 brightness-30 object-cover"/>
+    <?php endif; ?>
+    <div class="hero-content">
+        <?php if ($hero['hero_title']) : ?>
+            <h1 class="text-5xl font-bold"><?= $hero['hero_title'] ?></h1>
         <?php endif; ?>
-        <div class="hero-content -container absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center gap-32 w-800">
-            <?php if ($hero['hero_title']) : ?>
-                <h1><?= $hero['hero_title'] ?></h1>
-            <?php endif; ?>
-            <?php if ($hero['hero_subtitle']) : ?>
-                <p><?= $hero['hero_subtitle'] ?></p>
-            <?php endif; ?>
-            <!-- <?php if ($hero['hero_btn_members']) : ?>
-                <a href="<?= $hero['hero_btn_members']['url'] ?>" class="btn btn-primary inline-block w-max" target="<?= $hero['hero_btn_members']['target'] ?>">
-                    <?= $hero['hero_btn_members']['title'] ?>
-                </a>
-            <?php endif; ?>
-            <?php if ($hero['hero_btn_events']) : ?>
-                <a href="<?= $hero['hero_btn_events']['url'] ?>" class="btn btn-primary inline-block w-max" target="<?= $hero['hero_btn_events']['target'] ?>">
-                    <?= $hero['hero_btn_events']['title'] ?>
-                </a>
-            <?php endif; ?> -->
-        </div>
+        <?php if ($hero['hero_subtitle']) : ?>
+            <p class="text-xl"><?= $hero['hero_subtitle'] ?></p>
+        <?php endif; ?>  
+        <?php
+        $btn_members = $hero['hero_btn_members'] ?? null;
+        if ($btn_members) :
+            $page_id = url_to_postid($btn_members);
+            if ($page_id) {
+                $titre_members = get_the_title($page_id);
+            }
+        ?>
+            <a href="<?= esc_url($btn_members) ?>" class="btn btn-primary inline-block w-max">
+                <?= esc_html($titre_members) ?>
+            </a>
+        <?php endif ?>
+        <?php
+        $btn_events = $hero['hero_btn_events'] ?? null;
+        if ($btn_events) :
+            $page_id = url_to_postid($btn_events);
+            if ($page_id) {
+                $titre_events = get_the_title($page_id);
+            }
+        ?>
+            <a href="<?= esc_url($btn_events) ?>" class="btn btn-primary inline-block w-max">
+                <?= esc_html($titre_events) ?>
+            </a>
+        <?php endif; ?>    
     </div>
 </section>
