@@ -8,7 +8,7 @@ defined('ABSPATH') || exit;
 
   
 <footer class="site-footer">
-    <div class="container text-center py-6">
+    <div class="container text-center py-6 m-auto">
         <p>&copy; <?php echo date('Y'); ?> AEAIH – Tous droits réservés</p>
     </div>
     <?php wp_footer(); ?>

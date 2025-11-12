@@ -1,18 +1,24 @@
 @import "tailwindcss";
-/* @tailwind base;
-@tailwind components; */
-@tailwind utilities;
 
 :root {
-  --primary-color: #1e40af;
-  --secondary-color: #fbbf24;
+  --primary-color: #5c36bb;
+  --secondary-color: #dd6e3b;
 }
 
-body {
-  background: var(--primary-color);
-  color: var(--secondary-color);
+
+@layer utilities {
+  .main-menu ul {
+    @apply list-none flex gap-6 m-0 p-0 text-white;
+  }
 }
 
-.main-menu ul {
-  @apply list-none flex gap-6 m-0 p-0 text-white;
+@layer components {
+  body {
+      background: var(--primary-color);
+      color: var(--secondary-color);
+    }
+
+  .btn {
+    @apply border bg-white/10 backdrop-blur-sm border-white/30 shadow-lg py-2 px-4 rounded-lg hover:shadow-2xl;
+  }
 }

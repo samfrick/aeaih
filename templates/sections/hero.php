@@ -24,7 +24,7 @@ $hero = get_field('hero');
                      $titre_members = get_the_title($page_id);
                  }
              ?>
-                 <a href="<?= esc_url($btn_members) ?>" class="btn border bg-white/10 backdrop-blur-sm border-white/30 shadow-lg py-2 px-4 rounded-lg">
+                 <a href="<?= esc_url($btn_members) ?>" class="btn">
                      <?= esc_html($titre_members) ?>
                  </a>
              <?php endif ?>
@@ -36,7 +36,7 @@ $hero = get_field('hero');
                      $titre_events = get_the_title($page_id);
                  }
              ?>
-                 <a href="<?= esc_url($btn_events) ?>" class="btn border bg-white/10 backdrop-blur-sm border-white/30 shadow-lg py-2 px-4 rounded-lg">
+                 <a href="<?= esc_url($btn_events) ?>" class="btn">
                      <?= esc_html($titre_events) ?>
                  </a>
              <?php endif; ?>
