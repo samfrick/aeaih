@@ -8,3 +8,5 @@ node_modules/
 
 # Environnement local (si build plus tard)
 .env
+
+tailwindcss-linux-x64
