@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --primary-color: #5c36bb;
-  --secondary-color: #dd6e3b;
+  --primary-color: #264d80;
+  --secondary-color: #e6c559;
 }
 
 
@@ -14,8 +14,8 @@
 
 @layer components {
   body {
-      background: var(--primary-color);
-      color: var(--secondary-color);
+      background-color: white;
+      color: var(--primary-color);
     }
 
   .btn {

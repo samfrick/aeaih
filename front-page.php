@@ -12,6 +12,7 @@ get_header();
 
       get_template_part('templates/sections/hero');
       get_template_part('templates/flex/actualities');
+      get_template_part('templates/flex/presentation');
 
     endwhile;
   endif;
