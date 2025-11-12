@@ -14,7 +14,7 @@ $actualities = get_field('actualities');
             <img class="w-30 aspect-square" src="<?= esc_url($actualities['actu_image']['url']) ?>" alt="<?= esc_attr($actualities['actu_image']['alt']) ?>">
         <?php endif; ?>
         <?php if ($actualities['actu_description']) : ?>
-            <p><?= esc_html($actualities['actu_description']) ?></p>
+            <p class="text-"><?= esc_html($actualities['actu_description']) ?></p>
         <?php endif; ?>
     </div>
     <?php

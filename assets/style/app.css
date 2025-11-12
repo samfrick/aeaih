@@ -3,9 +3,14 @@
 @tailwind components; */
 @tailwind utilities;
 
+:root {
+  --primary-color: #1e40af;
+  --secondary-color: #fbbf24;
+}
+
 body {
-  background: #fafafa;
-  color: #333;
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .main-menu ul {

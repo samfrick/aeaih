@@ -15,8 +15,10 @@ defined('ABSPATH') || exit;
 
 <body <?php body_class(); ?>>
     <header class="header relative w-auto h-auto">
-        <div class="container w-full flex items-center justify-between py-4 absolute">
-            <a href="<?php echo home_url(); ?>" class="logo"><?php bloginfo('name'); ?></a>
+        <div class="container w-full flex items-center justify-between px-4 py-2 absolute z-10">
+            <a href="<?= home_url() ?>" class="logo text-white">
+                <img class="w-16" src="<?= get_template_directory_uri() ?>/assets/image/logo_aeaih.png" alt="Logo AEAIH">
+            </a>
             <nav class="main-nav">
                 <?php
                 wp_nav_menu([
