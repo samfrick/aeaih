@@ -14,14 +14,15 @@ defined('ABSPATH') || exit;
 </head>
 
 <body <?php body_class(); ?>>
-    <header class="header">
-        <div class="container relative">
+    <header class="header relative w-auto h-auto">
+        <div class="container w-full flex items-center justify-between py-4 absolute">
             <a href="<?php echo home_url(); ?>" class="logo"><?php bloginfo('name'); ?></a>
-            <nav class="main-nav absolute">
+            <nav class="main-nav">
                 <?php
                 wp_nav_menu([
                     'theme_location' => 'main_menu',
-                    'container' => false
+                    'container' => false,
+                    'menu_class' => 'main-menu',
                 ]);
                 ?>
             </nav>

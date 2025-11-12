@@ -1,4 +1,13 @@
+@import "tailwindcss";
+/* @tailwind base;
+@tailwind components; */
+@tailwind utilities;
+
 body {
   background: #fafafa;
   color: #333;
+}
+
+.main-menu ul {
+  @apply list-none flex gap-6 m-0 p-0 text-white;
 }

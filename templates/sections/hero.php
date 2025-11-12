@@ -2,20 +2,20 @@
 $hero = get_field('hero');
 ?>
 
-<section id="hero" class="hero relative flex flex-col items-center justify-center h-screen text-center text-white overflow-hidden">
+<section id="hero" class="hero relative flex flex-col items-center justify-center h-screen text-white overflow-hidden">
     <?php if ($hero['hero_image']) : ?>
         <img data-animation="translation" data-animation-speed="2" data-animation-type="top" src="<?= $hero['hero_image']['url'] ?>" alt="<?= $hero['hero_image']['alt'] ?? 'image hero' ?>" class="hero-image absolute -z-10 brightness-40 h-screen w-screen object-cover"/>
     <?php endif; ?>
-    <div class="hero-content">
+    <div class="hero-content w-1/3 flex flex-col items-center justify-center text-center">
         <?php if ($hero['hero_title']) : ?>
-            <h1 class="text-7xl font-bold"><?= $hero['hero_title'] ?></h1>
+            <h1 class="text-5xl sm:text-7xl font-bold"><?= $hero['hero_title'] ?></h1>
         <?php endif; ?>
         <?php if ($hero['hero_subtitle']) : ?>
-            <p class="text-xl"><?= $hero['hero_subtitle'] ?></p>
+            <p class="text-md sm:text-xl"><?= $hero['hero_subtitle'] ?></p>
         <?php endif; ?>  
 
         <!-- Boutons -->
-         <div class="hero-buttons mt-6 flex gap-4 justify-center">
+         <div class="hero-buttons mt-6 grid sm:grid-cols-2 gap-4 w-full">
              <?php
              $btn_members = $hero['hero_btn_members'] ?? null;
              if ($btn_members) :
