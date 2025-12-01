@@ -14,7 +14,7 @@ defined('ABSPATH') || exit;
 </head>
 
 <body <?php body_class(); ?>>
-    <header class="header fixed w-screen h-auto border-white/20">
+    <header class="header fixed w-screen h-auto border-b border-white/20">
         <div class="container w-full flex items-center justify-between gap-6 px-4 py-2 z-10 m-auto">
             <a href="<?= home_url() ?>" class="logo text-white">
                 <img class="w-16" src="<?= get_template_directory_uri() ?>/assets/image/logo_aeaih.png" alt="Logo AEAIH">
